@@ -1,0 +1,456 @@
+<html>
+<head>
+<title>The Tranquil Tome</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+    @keyframes extend {
+    0% {
+        width: 600px;
+        height: 200px;
+        border-radius: 100px;
+        } 10% {
+        width: 610px;
+        height: 210px;
+        background: #fff;
+        margin-left: 5px;
+        margin-top: - 5px;
+        } 20% {
+        width: 600px;
+        height: 200px;
+        background: #6fb07f;
+        margin-left: 0px;
+        margin-top: 0px;
+        } 100% {
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+        margin-left: 190px;
+        background: #607d8b;
+        }
+    }
+
+@-webkit-keyframes disappear {
+    0% {
+        opacity: 1;
+        } 20% {
+        color: #607d8b;
+        } 100% {
+        opacity: 0;
+        }
+    }
+@keyframes disappear {
+    0% {
+        opacity: 1;
+        } 20% {
+        color: #607d8b;
+        } 100% {
+        opacity: 0;
+        }
+    }
+
+@-webkit-keyframes appear {
+    0% {
+        opacity: 0;
+        } 70% {
+        opacity: 0;
+        } 100% {
+        opacity: 1;
+        }
+    }
+@keyframes appear {
+    0% {
+        opacity: 0;
+        } 70% {
+        opacity: 0;
+        } 100% {
+        opacity: 1;
+        }
+    }
+
+
+.contain {
+    position: absolute;
+    width: 610px;
+    height: 10px;
+    left: 50%;
+    top: 50%;
+    margin: -100px 0 0 -300px
+    }
+
+.btn {
+    margin-top: 2699px;
+    left: -41%;
+    border-width: 1px;
+    width: 154px;
+    height: 45px;
+    border-radius: 100px;
+    background: #fff;
+    position: absolute;
+    border: 5px solid #607d8b;
+}
+    
+
+.btn > span {
+    font-size: 24px;
+    color: #607d8b;
+    }
+
+.img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0
+    }
+
+.btn:focus {
+    -webkit-animation: extend 1s ease-in-out;
+    -ms-animation: extend 1s ease-in-out;
+    animation: extend 1s ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    /* Chrome, Safari, Opera */
+    animation-fill-mode: forwards
+    }
+
+.btn:focus > span {
+    -webkit-animation: disappear 1s ease-in-out;
+    -ms-animation: disappear 1s ease-in-out;
+    animation: disappear 1s ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    /* Chrome, Safari, Opera */
+    animation-fill-mode: forwards
+    }
+
+.btn:focus > .img {
+    -webkit-animation: appear 1s ease-in-out;
+    -ms-animation: appear 1s ease-in-out;
+    animation: appear 1s ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    /* Chrome, Safari, Opera */
+    animation-fill-mode: forwards
+    }
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px; 
+}
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #04AA6D;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+.PageBackToWork {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color:black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  text-shadow: 2px 2px white;
+  margin-top:-45px;
+  font-size: 60pt;
+    
+    &-rotationTextContainer {
+      position: relative;
+      
+    }
+    
+    &-rotationText {
+      display: inline-block;
+      position: relative;
+      
+      &.is-inactive {
+        position: absolute;
+        right: 0;
+        bottom: 100%;
+      }
+    }
+    
+    &-itText {
+      display: inline-block;
+    }
+  }
+  .cont {
+  position: relative;
+  width: 50%;
+}
+
+.pic {
+  display: block;
+  width: 400px;
+  height: 650px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 400px;
+  height: 650px;
+  opacity: 0;
+  transition: .5s ease;
+  background-color:black;
+  
+  
+}
+
+.cont:hover .overlay {
+  opacity: 0.5;
+}
+
+.txt {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  color:#fff;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+video{
+  height: 671px;
+  margin: right 10px;
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="#home" class="w3-bar-item w3-button">The Tranquil Tome</a>
+
+    <div class="w3-right w3-hide-small">
+      <a href="#home" class="w3-bar-item w3-button">Home</a>
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="dashboard.html" class="w3-bar-item w3-button">Catalogue</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    </div>
+  </div>
+</div>
+<div id="home">
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px">
+  <video autoplay muted loop id="myVideo" >
+    <source src="backvid.mp4" type="video/mp4">
+  </video>
+  
+</header></div>
+
+<div class="w3-content" style="max-width:1100px">
+
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+        <div class="PageBackToWork">
+  
+            <h1 id="hero-rotating-text" class="PageBackToWork-heading">
+            
+              <span class="PageBackToWork-heading-rotationTextContainer">
+             
+                <span data-hero-rotating-text class="PageBackToWork-heading-rotationText" style="font-size: 81pt; color: olivedrab;">READ</span>
+             
+                <span data-hero-rotating-text class="PageBackToWork-heading-rotationText is-hidden is-inactive" style="font-size: 81pt; color: olivedrab;">BUY</span>
+             
+                <span data-hero-rotating-text class="PageBackToWork-heading-rotationText is-hidden is-inactive" style="font-size: 81pt; color: olivedrab;">OWN</span>
+          
+            <span id="hero-it-text" class="PageBackToWork-heading-itText" style="color: olivedrab;">IT</span>
+          
+                </div>
+                <script>
+                    const containerEl = document.getElementById('hero-rotating-text');
+const itTextEl = document.getElementById('hero-it-text');
+const textEls =
+  Array.from(containerEl.querySelectorAll('[data-hero-rotating-text]'));
+
+const interval = 2000;
+
+let activeElement = 0;
+
+function rotateText() {
+  setTimeout(rotateText, interval);
+
+  const oldTextEl = textEls[activeElement];
+
+  activeElement += 1;
+  if (activeElement === textEls.length) {
+    activeElement = 0;
+  }
+
+  const newTextEl = textEls[activeElement];
+
+  const oldTextBeforeBoundingRect = oldTextEl.getBoundingClientRect();
+  const itTextBeforeBoundingRect = itTextEl.getBoundingClientRect();
+  oldTextEl.classList.add('is-inactive');
+  newTextEl.classList.remove('is-inactive');
+  newTextEl.classList.remove('is-hidden');
+  const oldTextAfterBoundingRect = oldTextEl.getBoundingClientRect();
+  const itTextAfterBoundingRect = itTextEl.getBoundingClientRect();
+
+  const oldTextLeftPosition =
+    oldTextBeforeBoundingRect.left - oldTextAfterBoundingRect.left;
+  const oldTextTopPosition =
+    oldTextBeforeBoundingRect.top - oldTextAfterBoundingRect.top;
+  const itTextLeftPosition =
+    itTextBeforeBoundingRect.left - itTextAfterBoundingRect.left;
+
+  const oldTextAnimationPlayer = oldTextEl.animate([{
+    opacity: 1,
+    transform: `translateX(${oldTextLeftPosition}px)
+      translateY(${oldTextTopPosition}px)`,
+  }, {
+    opacity: 0,
+    transform: `translateX(${oldTextLeftPosition}px) translateY(0)`,
+  }], {
+    duration: 300,
+    fill: 'forwards',
+    easing: 'ease-in-out',
+  });
+  oldTextAnimationPlayer.onfinish = () => {
+    oldTextEl.classList.add('is-hidden');
+  };
+
+  newTextEl.animate([{
+    opacity: 0,
+    transform: 'translateY(100%)',
+  }, {
+    opacity: 1,
+    transform: 'translateY(0)',
+  }], {
+    duration: 300,
+    fill: 'both',
+    easing: 'ease-in-out',
+  });
+
+  itTextEl.animate([{
+    transform: `translateX(${itTextLeftPosition}px)`,
+  }, {
+    transform: 'translateX(0)',
+  }], {
+    duration: 300,
+    fill: 'both',
+    easing: 'ease-in-out',
+  });
+}
+
+rotateText();
+
+                </script>
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">About Catalogue</h1><br>
+      <h5 class="w3-center">Since 1889</h5>
+      <p class="w3-large">The Book Store Web App is an immersive online platform designed for book lovers and avid readers. It provides a convenient and user-friendly interface to browse, search, and purchase a vast collection of books across various genres and categories.The Book Store Web App is designed to be responsive and accessible across various devices, including desktops, laptops, tablets, and smartphones. It offers a visually appealing and intuitive user interface, ensuring an enjoyable and seamless browsing experience.
+      <p class="w3-large">Whether you're a passionate bookworm, a casual reader, or a student searching for educational resources, the Book Store Web App is your go-to destination for discovering, purchasing, and connecting with the world of literature. Start your literary journey today and immerse yourself in a world of endless stories, knowledge, and imagination.</p>
+    </div>
+  </div>
+  
+  <hr>
+  
+  <!-- Menu Section -->
+  <div class="w3-row w3-padding-64" id="menu">
+    <div class="w3-col l6 w3-padding-64">
+      <h1 class="w3-center">Some Famous Books</h1><br>
+      <h4>The Book Loft</h4>
+      <p class="w3-text-grey">Uncovering the Secrets of a Small Town</p><br>
+    
+      <h4>Paper and Pens</h4>
+      <p class="w3-text-grey">Rediscovering Life's Meaning in a Dystopian World</p><br>
+    
+      <h4>Leaf & Letter</h4>
+      <p class="w3-text-grey">Journey into the Past: A Historical Novel</p><br>
+    
+      <h4>Inkwell Books</h4>
+      <p class="w3-text-grey">An Epic Fantasy Adventure</p><br>
+    
+      <h4>Novel Oasis</h4>
+      <p class="w3-text-grey">Exploring the Depths of Human Nature</p>    
+    </div>
+    
+    <div class="w3-col l6 w3-padding-large">
+        <div class="cont">
+            <img src="studio.jpg" alt="Avatar" class="pic">
+            <div class="overlay">
+              <div class="txt">hey bibliophile</div>
+            </div>
+          </div>
+  </div>
+
+  <hr>
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-64" >
+    <h1>Contact</h1><br>
+    <p>We offer , large or small. We understand your needs and we will provide the books to satisfy the biggest criteria of them all, both intrest and knowledge. Do not hesitate to contact us.</p>
+    <p class="w3-text-blue-grey w3-large"><b>Books Service, 42nd Living St, 43043 New York, NY</b></p>
+    <p>You can also contact us by phone 00553123-2323 or email booking@Catalogue.com, or you can send us a message here:</p>
+    <form id="contact" target="_blank">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name of Book" required name="People"></p>
+      <p><input class="w3-input w3-padding-16" type="datetime-local" placeholder="Date and time" required name="date" value="2020-11-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+      <div class="contain">  
+        <button class="btn"><span>Submit</span><img class="img" src="https://i.cloudup.com/2ZAX3hVsBE-3000x3000.png" height="62" width="62"></button>    
+        </div>
+    </form>
+  </div>
+  
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-32">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">bookishh</a></p>
+</footer>
+
+</body>
+</html>
